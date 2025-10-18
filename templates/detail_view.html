@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='detail_view.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="">Home</a> |
+            <a href="">Summary</a> |
+            <a href="">Logout</a> |
+        </nav>
+        
+        <h1>Occupied Parking Spot Details</h1>
+        <div class="form-container">
+        <form method="POST">
+            <label>ID:</label>
+            <input type="number" name="id" value="{{id}}" readonly>
+
+            <label>Customer ID:</label>
+            <input type="number" name="cust_id" value="{{data[0]}}" readonly>
+
+            <label>Vehicle number:</label>
+            <input type="text" name="vehicle_no" value="{{data[1]}}" readonly>
+
+            <label>Date/Time of parking:</label>
+            <input type="text" name="time" value="{{data[2]}}" readonly>
+
+            <label>Estimated cost:</label>
+            <input type="number" name="rate" value="{{data[3]}}" readonly>
+
+            
+        </form>
+        </div>
+        <div class="cancel">
+            <form method="GET" action="{{url_for('user_home',name='Administrator')}}">
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+        </div>
+    </body>
+</html>

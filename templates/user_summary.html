@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='user_summary.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="{{url_for('user_home',name=name)}}">Home</a> |
+            <a href="">Summary</a> |
+            <a href="{{url_for('logout')}}">Logout</a> |
+        </nav>
+       
+        <h2> Parking summary</h2>
+        
+        <img src="/static/lot_duration.png" class="center-img" height="560">
+        
+    </body>
+
+</html>

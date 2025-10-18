@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="">Home</a> |
+            <a href="">Summary</a> |
+            <a href="">Logout</a> |
+        </nav>
+        <div class="corner-text">
+            <h6>Welcome to Administrator</h6>
+        </div>
+        <h1>View/Delete parking spot</h1>
+        
+        <form >
+            <label>ID:</label>
+            <input type="text" name="ID" value="{{id}}" readonly>
+
+            <label>Status:</label>
+            {%if status=='A'%}
+                <button  class="a-button">A</button>
+            {%else%}
+                
+                    <a href="{{url_for('detailed_view',id=id)}}" class="o-button">O</a>
+                
+            {%endif%}
+            
+        </form>
+        {%if status=='A'%}
+            <div class="cancel-form">
+            <form method="POST"  action="{{url_for('del_spot',id=id)}}">
+                <button type="submit" class="cancel">Delete</button>
+            </form>
+            </div>
+        {%endif%}
+        <a href="{{url_for('user_home',name='Administrator')}}"><button class="delete">Cancel</button></a>
+        
+        
+        
+    </body>
+</html>

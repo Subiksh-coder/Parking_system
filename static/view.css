@@ -1,0 +1,127 @@
+nav a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    z-index: 999;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: #a2b3bd;
+    border-radius: 6px;
+}
+
+nav {
+    background-color: rgb(2, 156, 245);
+    padding: 1%;
+    font-style:initial;
+    font-size: 110%;
+    text-align:center;   
+}
+
+h1{
+    text-align: center;
+    padding: 0.25%;
+    background-color: rgb(215, 218, 50);
+}
+
+form{
+    
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 4%;
+    max-width: 15%;
+    padding: 5% 10%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 130%;
+    left:33%
+    
+}
+
+input {
+    padding: 15% 10%;
+    width: 100%;
+    margin-bottom: 30%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 60%;
+    transition: border-color 0.3s ease;
+}
+
+label {
+    color: #333;
+    font-size: 90%;
+    margin-bottom: 20%;
+    display: block;
+    font-weight: 500;
+}
+
+.cancel{
+    background-color: rgb(218, 135, 129);
+    position: relative;
+    margin: 10%;
+    padding: 3% 6%;
+    font-size: 110%;
+    border-radius: 11px;
+    
+}
+
+.delete{
+    position: absolute;
+    background-color: rgb(219, 11, 226);
+    font-size: 110%;
+    padding: 0.3% 1.2%;
+    border-radius: 11px;
+    left:42%;
+    top:73%;
+}
+
+
+
+
+button:hover{
+    background-color: rgb(218, 163, 124);
+}
+
+.a-button{
+    position: absolute;
+    border-radius: 11px;
+    background-color: rgb(94, 179, 9);
+    left: 50%;
+    top: 63%;
+    padding: 2% 10%;
+
+}
+
+.a-button:hover{
+    background-color: rgb(5, 247, 5);
+}
+
+.o-button{
+    position: absolute;
+    text-decoration: none;
+    border-radius: 11px;
+    background-color: rgb(202, 42, 42);
+    left: 50%;
+    top: 63%;
+    padding: 2% 10%;
+
+}
+
+.o-button:hover{
+    background-color: rgb(250, 4, 4);
+}
+
+.cancel-form{
+    position: absolute;
+    background-color:none;
+    left: 50%;
+    top: 73%;
+}
+
+

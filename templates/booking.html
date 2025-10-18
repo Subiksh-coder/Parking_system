@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='booking.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="">Home</a> |
+            <a href="">Summary</a> |
+            <a href="">Logout</a> |
+        </nav>
+    
+        <h1>Book the parking spot</h1>
+        <div class="form-container">
+        <form method="POST">
+            <label>Lot ID:</label>
+            <input type="number" name="lot_id" value="{{lot_id}}" readonly>
+            <label>Spot ID:</label>
+            <input type="number" name="spot_id" value="{{spot_id}}" readonly>
+            <label>User ID:</label>
+            <input type="text" name="user_id" value="{{user_id}}" readonly>
+            <label>Vehicle Number:</label>
+            <input type="text" name="vehicle_no" required>
+            <button type="submit" onclick="history.back()">Book</button>    
+        </form>
+        </div>
+        
+        <a href="{{url_for('user_home',name=name)}}"><button class="cancel">Go Back</button></a>
+        
+    </body>
+</html>

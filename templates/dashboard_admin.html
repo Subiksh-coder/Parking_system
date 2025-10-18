@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard_admin.css') }}">
+</head>
+<body>
+
+    <nav>
+        
+        
+        <a  href="{{url_for('users')}}">Users</a>    |
+        <a href="{{url_for('admin_summary')}}">Summary</a>   |
+        <a href="{{url_for('logout')}}">Logout</a>
+    </nav>
+
+    <div class="corner-text">
+        <h6>Welcome to {{ name }}</h6>
+    </div>
+
+    <h2>Parking Lots</h2>
+
+    <div class="lot-area">
+        {% for i in range(lots | length) %}
+            <div class="lot-card">
+                <h3>{{ location[i] }}</h3>
+                <div class="actions">
+                    <a href="{{url_for('edit',locname=location[i])}}">Edit</a> |
+                    <a href="{{ url_for('delete', locname=location[i]) }}">Delete</a>
+                </div>
+                <p>Occupied: {{ occ[i] }}/{{ total[i] }}</p>
+
+                <div class="slots">
+                    {% for slot in lots[i] %}
+                        {% if slot[2] == "A" %}
+                        <form action="{{url_for('view',id=slot[0])}}">
+                            <div class="slot available"><button >A</button></div>
+                        </form>
+                        {% elif slot[2] == "O" %}
+                            <form action="{{url_for('view',id=slot[0])}}">
+                            <div class="slot occupied"><button>O</button></div>
+                            </form>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Add lot card styled like others -->
+        <form method="GET" action="{{url_for('add_card')}}">
+            <button class="add-lot-btn">+ Add Lot</button>
+        </form>
+    </div>
+
+</body>
+</html>

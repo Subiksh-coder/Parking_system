@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='release.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="">Home</a> |
+            <a href="">Summary</a> |
+            <a href="">Logout</a> |
+        </nav>
+        
+        <h1>Release the parking spot</h1>
+        <div class="form-container">
+        <form method="POST">
+            <label>Spot ID:</label>
+            <input type="number" name="spot_id" value="{{id}}" readonly>
+
+            <label>Vehicle number:</label>
+            <input type="text" name="vehicle_no" value="{{data[0]}}" readonly>
+
+            <label>Parking time:</label>
+            <input type="text" name="parking_time" value="{{data[1]}}" readonly>
+
+            <label>Release time</label>
+            <input type="text" value="{{now}}" name="release_time" readonly>
+
+            ,<label>Total cost</label>
+            <input type="number" name="cost" value="{{data[3]}}" readonly>
+
+            <button type="submit" >Release</button>    
+        </form>
+        </div>
+        
+        <button onclick="history.back()" class="cancel">Go Back</button>
+        
+    </body>
+</html>

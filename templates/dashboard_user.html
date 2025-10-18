@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='dashboard_user.css') }}">
+    </head>
+    <body>
+        <nav>
+            <a href="{{url_for('user_home',name=name)}}">Home</a> |
+            <a href="{{url_for('user_summary',usid=usid , nme=name)}}">Summary</a> |
+            <a href="{{url_for('logout')}}">Logout</a> |
+        </nav>
+        <div class="corner-text">
+            <h6>Welcome to {{name}}</h6>
+        </div>
+        <h2>Recent parking history</h2>
+        <div class="scrollable-table">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Location</th>
+                <th>Vehicle No</th>
+                <th>Timestamp</th>
+                <th>Action</th>
+            </tr>
+            {% for i in data%}
+            <tr>
+                
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                
+                {%if i[4]==None%}
+                    <td>{{i[3]}}</td>
+                    <td><a href="{{url_for('release',id=i[0])}}" class="release">release</a></td>
+                {%else%}
+                    <td>{{i[4]}}</td>
+                    <td><button class="parked-out" >Parked out</button></td>
+                {%endif%}
+            </tr>
+            {%endfor%}
+                
+            
+        </table>
+        </div>
+        <hr>
+        <form method="POST">
+            <label>Enter the location name/pincode:</label>
+            <input type="text" name="location" required>
+            <button type="submit">Enter</button>
+        </form>
+        <div class="scrollable-table">
+        <table class="table-container">
+            <tr>
+                <th>ID</th>
+                <th>Location</th>
+                <th>Pincode</th>
+                <th>Action</th>
+            </tr>
+            {%for j in locdata%}
+            <tr>
+                 <td>{{j[0]}}</td>
+                 <td>{{j[1]}}</td>
+                 <td>{{j[2]}}</td>
+                 <td><a  href="{{url_for('book',id=j[0],usid=usid,name=name)}}" class="book">Book</a></td>
+            </tr>
+            {%endfor%}
+
+        </table>
+        </div>
+    </body>
+
+</html>

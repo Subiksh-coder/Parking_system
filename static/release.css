@@ -1,0 +1,92 @@
+nav a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    z-index: 999;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: #a2b3bd;
+    border-radius: 6px;
+}
+
+nav {
+    background-color: rgb(2, 156, 245);
+    padding: 1%;
+    font-style:initial;
+    font-size: 110%;
+    text-align:center;
+}
+
+h1{
+    text-align: center;
+    padding: 0.25%;
+    background-color: rgb(215, 218, 50);
+}
+
+form{
+    display:flexbox;
+    position: absolute;
+    margin-left: 1%;
+    max-width: 10%;
+    padding: 3.5% 40%;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 130%;
+    left:3%
+    
+}
+
+input {
+
+    padding: 12% 30%;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 60%;
+    transition: border-color 0.3s ease;
+}
+
+label {
+    color: #333;
+    font-size: 90%;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+}
+
+.cancel{
+    background-color: rgb(197, 131, 126);
+    position: absolute;
+    font-size: 90%;
+    padding: 8px 20px;
+    width: 120px;
+    border-radius: 11px;
+    left: 54%;
+    top: 88%;
+    
+}
+
+button{
+    position:absolute;
+    margin-top:1%;
+    padding: 0.5% 3%;
+    background-color: rgb(120, 214, 135);
+    border-radius: 15px;
+    font-size: 80%;
+}
+
+
+button:hover{
+    background-color: rgb(218, 163, 124);
+}
+
+
+
+
+

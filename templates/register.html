@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+</head>
+<body>
+ <div class="form-container">   
+<form method="POST">
+    <h2>Register</h2>
+    <label>username</label>
+    <input type="text" name="name" required>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <button type="submit">Submit</button>
+    <h5> already have a login?</h5>
+    <a href="{{url_for('index')}}">click here</a>
+</form>
+</div>
+
+
+</body>
+</html>

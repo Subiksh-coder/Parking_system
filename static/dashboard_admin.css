@@ -1,0 +1,157 @@
+
+body{
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    z-index: 999;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: #a2b3bd;
+    border-radius: 6px;
+}
+
+nav {
+    background-color: rgb(2, 156, 245);
+    padding: 1%;
+    font-style:initial;
+    font-size: 110%;
+    text-align:center;
+    
+  
+    
+}
+
+.corner-text {
+    position: relative;
+    bottom:88px;
+    left: 1.5%;
+    font-size: 200%;
+    font-style: italic;
+    color: #e8ece7;
+}
+
+
+h2 {
+    position: relative;
+    text-align:center;
+    bottom: 110px;
+    margin-top: 0;
+    font-size: 28px;
+    font-family: 'Segoe UI', sans-serif;
+   
+    
+}
+
+
+.lot-area {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 10px;
+    bottom: 110px;
+    margin-bottom: 0px;
+
+}
+
+
+.lot-card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 240px;
+    height:250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    overflow-y:hidden;
+}
+
+.lot-card:hover{
+    overflow-y:auto;
+}
+
+
+.lot-card h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.actions {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.actions a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #3b70ca;
+}
+
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.slot {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.occupied button{
+    background-color: #ffcdd2;
+}
+
+.occupied button:hover{
+    background-color: #ff3c00;
+}
+
+.available button{
+    background-color: #c8e6c9;
+}
+.available button:hover{
+    background-color: #00ff6a;
+}
+
+
+.add-lot-btn {
+    height: 290px;
+    width: 240px;
+    border: 2px dashed #90caf9;
+    border-radius: 20px;
+    background-color: #e3f2fd;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0277bd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-lot-btn:hover {
+    background-color: #bbdefb;
+}
