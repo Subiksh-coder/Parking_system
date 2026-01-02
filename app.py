@@ -14,7 +14,7 @@ app.secret_key="ejhfv"
 
 
 def dbconn():
-    conn=sqlite3.Connect('database.sqlite')
+    conn=sqlite3.connect('database.sqlite')
     return conn
 
 
